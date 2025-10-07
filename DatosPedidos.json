@@ -1,0 +1,31 @@
+[
+  {
+    "Id": 101,
+    "EstadoPedido": 0,
+    "Obs": "Pizza grande y Coca Cola de 2L",
+    "Cliente": {
+      "Direccion": "Calle Falsa 123",
+      "Nombre": "Juan P\u00E9rez",
+      "Telefono": "555-1234",
+      "DatosReferenciaDireccion": "ninguna"
+    },
+    "RefCadete": {
+      "Id": 1,
+      "Nombre": "Mario G\u00F3mez",
+      "Direccion": "Av.Alem 700",
+      "Telefono": "555-5678"
+    }
+  },
+  {
+    "Id": 102,
+    "EstadoPedido": 0,
+    "Obs": "Remera",
+    "Cliente": {
+      "Direccion": "Prospero Mena",
+      "Nombre": "Yazmin",
+      "Telefono": "3813737373",
+      "DatosReferenciaDireccion": "porton verde"
+    },
+    "RefCadete": null
+  }
+]

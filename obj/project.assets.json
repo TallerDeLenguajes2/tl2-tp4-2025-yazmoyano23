@@ -447,26 +447,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\Yazzi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\tl2-tp4-2025-yazmoyano23\\tl2-tp4-2025-yazmoyano23.csproj",
+      "projectUniqueName": "C:\\taller2024\\tl2-tp4-2025-yazmoyano23\\tl2-tp4-2025-yazmoyano23.csproj",
       "projectName": "tl2-tp4-2025-yazmoyano23",
-      "projectPath": "C:\\Users\\Alumno\\Desktop\\tl2-tp4-2025-yazmoyano23\\tl2-tp4-2025-yazmoyano23.csproj",
-      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\Desktop\\tl2-tp4-2025-yazmoyano23\\obj\\",
+      "projectPath": "C:\\taller2024\\tl2-tp4-2025-yazmoyano23\\tl2-tp4-2025-yazmoyano23.csproj",
+      "packagesPath": "C:\\Users\\Yazzi\\.nuget\\packages\\",
+      "outputPath": "C:\\taller2024\\tl2-tp4-2025-yazmoyano23\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Yazzi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -514,7 +512,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.314/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

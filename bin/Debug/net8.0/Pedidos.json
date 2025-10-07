@@ -1,0 +1,19 @@
+[
+    {
+      "Id": 101,
+      "Obs": "Pizza grande y Coca Cola de 2L",
+      "Cliente": {
+        "Nombre": "Juan Pérez",
+        "Direccion": "Calle Falsa 123",
+        "Telefono": "555-1234",
+        "DatosReferenciaDireccion": "ninguna"
+      },
+      "EstadoPedido": "SinAsignar",
+      "RefCadete": {
+        "Id": 1,
+        "Nombre": "Mario Gómez",
+        "Direccion": "Av.Alem 700",
+        "Telefono": "555-5678"
+      }
+    }
+]
