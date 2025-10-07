@@ -65,5 +65,4 @@ C:\taller2024\tl2-tp4-2025-yazmoyano23\obj\Debug\net8.0\tl2-tp4-2025-yazmoyano23
 C:\taller2024\tl2-tp4-2025-yazmoyano23\obj\Debug\net8.0\ref\tl2-tp4-2025-yazmoyano23.dll
 C:\taller2024\tl2-tp4-2025-yazmoyano23\bin\Debug\net8.0\DatosCadeteria.json
 C:\taller2024\tl2-tp4-2025-yazmoyano23\bin\Debug\net8.0\DatosCadetes.json
-C:\taller2024\tl2-tp4-2025-yazmoyano23\bin\Debug\net8.0\Pedidos.json
 C:\taller2024\tl2-tp4-2025-yazmoyano23\bin\Debug\net8.0\DatosPedidos.json

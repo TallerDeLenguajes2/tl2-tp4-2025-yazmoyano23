@@ -69,7 +69,13 @@ namespace espacioJSON
         }
         public void Guardar(List<Pedido> pedidos)
         {
-            string jsonString = JsonSerializer.Serialize(pedidos, new JsonSerializerOptions { WriteIndented = true });
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Converters = { new JsonStringEnumConverter() } // 👈 convierte enums a texto
+            };
+
+            string jsonString = JsonSerializer.Serialize(pedidos,options);
             File.WriteAllText(rutaPedidos, jsonString);
         }
     }

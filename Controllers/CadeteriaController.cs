@@ -37,8 +37,8 @@ public class CadeteriaController : ControllerBase
         if (pedidos.Count == 0) { return NotFound("No se encontraron pedidos."); }
         return Ok(pedidos);
     }
-    
-        [HttpPost("AddPedido")]
+
+    [HttpPost("AddPedido")]
     public IActionResult AddPedido([FromBody] PedidoRequest request)
     {
         if (request == null)
@@ -55,6 +55,39 @@ public class CadeteriaController : ControllerBase
         );
         acceso.Guardar(cadeteria.GetPedidos());
         return Ok($"Pedido Nº{id} agregado exitosamente");
+    }
+
+    [HttpGet("GetInforme")]
+    public ActionResult<IEnumerable<string>> GetInforme()
+    {
+        return Ok(cadeteria.ObtenerInforme());
+    } 
+
+    [HttpPut("AsignarPedido/{idCadete}/{idPedido}")]
+    public ActionResult AsignarPedido(int idCadete, int idPedido)
+    {
+        if (cadeteria.AsignarPedidoACadete(idCadete, idPedido))
+        {
+            acceso.Guardar(cadeteria.GetPedidos());
+            return Ok("Pedido asignado exitosamente");
+        }
+        else
+        {
+            return BadRequest("ID/s invalido/s");
+        }
+    }
+
+    [HttpPut("CambiarEstadoPedido/{idPedido}/{numEstado}")]
+    public ActionResult CambiarEstadoPedido(int idPedido, int numEstado)
+    { 
+        if (cadeteria.CambiarEstadoDePedidoPorId(idPedido,numEstado))
+        {
+            acceso.Guardar(cadeteria.GetPedidos());
+            return Ok("Estado modificado correctamente");
+        }else
+        {
+            return BadRequest("No se pudo cambiar el estado");
+        }
     }
     
 }

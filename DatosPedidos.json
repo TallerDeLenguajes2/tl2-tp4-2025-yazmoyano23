@@ -1,7 +1,7 @@
 [
   {
     "Id": 101,
-    "EstadoPedido": 0,
+    "EstadoPedido": "SinAsignar",
     "Obs": "Pizza grande y Coca Cola de 2L",
     "Cliente": {
       "Direccion": "Calle Falsa 123",
@@ -18,7 +18,7 @@
   },
   {
     "Id": 102,
-    "EstadoPedido": 0,
+    "EstadoPedido": "Entregado",
     "Obs": "Remera",
     "Cliente": {
       "Direccion": "Prospero Mena",
@@ -26,6 +26,11 @@
       "Telefono": "3813737373",
       "DatosReferenciaDireccion": "porton verde"
     },
-    "RefCadete": null
+    "RefCadete": {
+      "Id": 2,
+      "Nombre": "Ana Gomez",
+      "Direccion": "Avenida Siempre Viva 456",
+      "Telefono": "6677889900"
+    }
   }
 ]

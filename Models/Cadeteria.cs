@@ -135,23 +135,40 @@ namespace espacioCadeteria
             return true;
         }
 
-        public double JornalACobrar(int idCadete)
+        public double JornalACobrar(int pedidosEntregados)
         {
-            //buscar dentro de pedidos, y sumar los que cumplan la condicion del id y que su estado sea entregado
-            int cantidad = ListadoPedidos.Count(p => p.GetIdCadete() == idCadete && p.EstadoPedido == Estado.Entregado);
-            return jornal * cantidad;
+            return jornal * pedidosEntregados;
             
         }
 
- /*       public void ListarPedidosSinAsignar()
-        {
-            var sinAsignar = ListadoPedidos.Where(p => p.EstadoPedido == Estado.SinAsignar);
-            foreach (var pedido in sinAsignar)
-            {
-                pedido.InfoPedido();
-            }
-        }*/
+        /*       public void ListarPedidosSinAsignar()
+               {
+                   var sinAsignar = ListadoPedidos.Where(p => p.EstadoPedido == Estado.SinAsignar);
+                   foreach (var pedido in sinAsignar)
+                   {
+                       pedido.InfoPedido();
+                   }
+               }*/
 
+        public List<string> ObtenerInforme()
+        {
+            List<string> informe = new List<string>();
+            double montoTotalGanado = 0;
+            int enviosCadetes = 0;
+            foreach (var cadete in ListadoCadetes)
+            {
+                int pedidosEntregados = ListadoPedidos.Count(p => p.GetIdCadete() == cadete.Id && p.EstadoPedido == Estado.Entregado);
+                double jornal = JornalACobrar(pedidosEntregados);
+                enviosCadetes += pedidosEntregados;
+                montoTotalGanado += jornal;
+                informe.Add($"Cadete {cadete.Nombre} - Pedidos entregados: {pedidosEntregados}, Jornal: ${jornal}");
+            }
+
+            var promedio = (double)enviosCadetes/ListadoCadetes.Count();
+            informe.Add($"Total: {montoTotalGanado} - Envios promedio por cadete: {promedio}");
+
+            return informe;
+        }
         public void GenerarInforme()
         {
 
